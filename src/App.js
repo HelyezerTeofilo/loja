@@ -1,23 +1,33 @@
-import logo from './logo.svg';
+import React, { useState, useEffect } from 'react';
+import axios from 'axios';
+import Card from './Card';
+import Header from './Header';
+import Footer from './Footer';
 import './App.css';
 
 function App() {
+  const [produtos, setProdutos] = useState([]);
+
+  useEffect(() => {
+    axios.get('https://fakestoreapi.com/products?limit=12')
+      .then((resposta) => {
+        setProdutos(resposta.data);
+      });
+  }, []);
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Header />
+      <main className="container mt-4">
+        <div className="row">
+          {produtos.map((produto) => (
+            <div className="col-md-3" key={produto.id}>
+              <Card produto={produto} />
+            </div>
+          ))}
+        </div>
+      </main>
+      <Footer />
     </div>
   );
 }
