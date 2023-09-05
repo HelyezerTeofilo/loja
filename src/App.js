@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
-import Card from './Card';
-import Header from './Header';
-import Footer from './Footer';
+import Card from './components/Card';
+import Header from './components/Header';
+import Footer from './components/Footer';
 import './App.css';
 
 function App() {
