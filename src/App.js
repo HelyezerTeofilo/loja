@@ -3,7 +3,7 @@ import axios from 'axios';
 import Card from './components/Card';
 import Header from './components/Header';
 import Footer from './components/Footer';
-import './App.css';
+import './css/App.css';
 
 function App() {
   const [produtos, setProdutos] = useState([]);
