@@ -1,16 +1,23 @@
-import React from 'react';
 import '../css/Footer.css';
+import React from 'react';
+import { Layout } from 'antd';
+const { Footer } = Layout;
 
-function Footer() {
+const FooterApp = () => {
   return (
-    <footer className="store-footer">
-      <div className="container text-center">
-        <h3>Informações de Contato</h3>
-        <p>Endereço: Rua da Loja, 123 Email: contato@minhaloja.com</p>
+    <Layout className="layout">
+      <Footer
+        style={{
+          textAlign: 'center',
+        }}
+      className='footer'
+      >
+        <h4>Informações de Contato</h4>
+        Endereço: Rua da Loja, 123 Email: contato@minhaloja.com
         <p>Telefone: (123) 456-7890</p>
-      </div>
-    </footer>
+      </Footer>
+    </Layout>
   );
-}
+};
 
-export default Footer;
+export default FooterApp;

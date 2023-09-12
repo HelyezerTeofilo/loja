@@ -1,29 +1,12 @@
-.card {
-    width: 18rem;
-    height: 90%;
-    display:flex;
-    flex-direction: column;
-}
-  
-.card-img-top{
-    height:60%;
-}
-
-.card-body{
-    width:auto;
-}
-
-.card-title{
-    text-align: center;
-
-}
-
-.card-text{
-    text-align: center;
-
-}
-
 .card-text-price{
     text-align: center;
+    color: blue;
+    font-size:large;
+    font-weight:bold;
 }
+
+.card-link {
+    text-decoration: none;
+    color: inherit;
+  }
   

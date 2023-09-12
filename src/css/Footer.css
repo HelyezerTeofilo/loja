@@ -1,40 +1,8 @@
-.store-footer {
-    background-color: #F5F5F5;
-    color: #fff;
-    padding: 10px;
-  }
-  
-  .store-footer h3 {
-    font-size: 18px;
-    font-weight: bold;
-    margin-bottom: 15px;
-    color: #000;
-  }
-  
-  .store-footer p,
-  .store-footer ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    font-size: 14px;
-  }
-  
-  .store-footer p {
-    margin-bottom: 10px;
-    color: #000;
-  }
-  
-  .store-footer ul li {
-    margin-bottom: 8px;
-  }
-  
-  .store-footer a {
-    color: #fff;
-    text-decoration: none;
-    transition: color 0.3s;
-  }
-  
-  .store-footer a:hover {
-    color: #ffc107; /* Cor de destaque ao passar o mouse */
-  }
+.footer {
+    width: 100%;
+    background-color: #f5f5f5;
+    color: black;
+    text-align: center;
+    padding: 16px;;
+}
   

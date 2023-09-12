@@ -4,12 +4,14 @@ import Card from './components/Card';
 import Header from './components/Header';
 import Footer from './components/Footer';
 import './css/App.css';
+import { Row } from 'antd';
+import CarouselApp from './components/Carousel';
 
 function App() {
-  const [produtos, setProdutos] = useState([]);
+  const [products, setProdutos] = useState([]);
 
   useEffect(() => {
-    axios.get('https://fakestoreapi.com/products?limit=12')
+    axios.get('https://fakestoreapi.com/products')
       .then((resposta) => {
         setProdutos(resposta.data);
       });
@@ -18,15 +20,12 @@ function App() {
   return (
     <div className="App">
       <Header />
-      <main className="container mt-4">
-        <div className="row">
-          {produtos.map((produto) => (
-            <div className="col-md-3" key={produto.id}>
-              <Card produto={produto} />
-            </div>
-          ))}
-        </div>
-      </main>
+      <CarouselApp products={products}></CarouselApp>
+      <Row gutter={[16, 16]}>
+      {products.map((product) => (
+        <Card key={product.id} produto={product} />
+      ))}
+    </Row>
       <Footer />
     </div>
   );
